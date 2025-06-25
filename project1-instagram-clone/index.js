@@ -6,7 +6,7 @@ const instadata = require("./data.json");
 const { render } = require("ejs");
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+app.set("views", "views");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {

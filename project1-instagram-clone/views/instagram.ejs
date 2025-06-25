@@ -3,22 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instagram</title>
+    <title><%= data.name %>'s Instagram</title>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <h3>Instagram</h3>
-    <hr />
-    <h4>Username: <%= data.name %></h4>
-    <p>
-      Followers: <%= data.followers %> <br />Following: <%= data.following %>
-    </p>
-    <h3>Posts</h3>
-    <% for(let i=0;i<data.posts.length;i++){ %>
-        <div>
-            <img src="<%= data.posts[i].image %>" width="200px" height="200px">
-            <p>Likes <%=data.posts[i].likes %> Comments <%= data.posts[i].comments%></p>
+    <div class="container">
+      <header>
+        <h1><%= data.name %>'s Instagram</h1>
+        <div class="stats">
+          <span><strong>Followers:</strong> <%= data.followers %></span>
+          <span><strong>Following:</strong> <%= data.following %></span>
         </div>
-   <% } %>
+      </header>
+
+      <section class="posts-grid">
+        <% for (let i = 0; i < data.posts.length; i++) { %>
+          <div class="post-card">
+            <img src="<%= data.posts[i].image %>" alt="Post Image" class="post-img" />
+            <p>❤️ <%= data.posts[i].likes %> Likes &nbsp; 💬 <%= data.posts[i].comments %> Comments</p>
+          </div>
+        <% } %>
+      </section>
+    </div>
   </body>
 </html>
