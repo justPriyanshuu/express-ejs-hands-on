@@ -12,6 +12,10 @@ app.get("/",(req,res)=>{
     res.render("home");
 })
 
+app.get("/instagram",(req,res)=>{
+    res.render("instagram");
+})
+
 app.listen(port,()=>{
     console.log(`Listening on port ${port}`);
 })
