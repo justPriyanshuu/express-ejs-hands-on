@@ -1,6 +1,6 @@
 {
-  "dogs": {
-    "name": "dogs",
+  "dog": {
+    "name": "Doggyy",
     "followers": 75000,
     "following": 150,
     "posts": [
@@ -10,7 +10,7 @@
         "comments": 41
       },
       {
-        "image": "https://images.unsplash.com/photo-1552053831-71594a276d63",
+        "image": "https://i2.wp.com/earthnworld.com/wp-content/uploads/2017/04/Pomeranian-1.jpg?ssl=1",
         "likes": 2000,
         "comments": 30
       }

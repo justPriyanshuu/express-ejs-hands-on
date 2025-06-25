@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Instagram</title>
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
     <h3>Instagram</h3>
-    <hr>
-    <p>Username:</p>
-    <p>Following <%=  %> Followers <%=  %></p>
-    <img src="">
-    <p>Likes <%=  %> Comments <%=  %></p>
-</body>
+    <hr />
+    <h4>Username: <%= data.name %></h4>
+    <p>
+      Followers: <%= data.followers %> <br />Following: <%= data.following %>
+    </p>
+    <h3>Posts</h3>
+    <% for(let i=0;i<data.posts.length;i++){ %>
+        <div>
+            <img src="<%= data.posts[i].image %>" width="200px" height="200px">
+            <p>Likes <%=data.posts[i].likes %> Comments <%= data.posts[i].comments%></p>
+        </div>
+   <% } %>
+  </body>
 </html>
