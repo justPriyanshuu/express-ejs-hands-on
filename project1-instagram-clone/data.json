@@ -2,7 +2,7 @@
   "dog": {
     "name": "Doggyy",
     "followers": 75000,
-    "following": 150,
+    "following": 250,
     "posts": [
       {
         "image": "https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a",
