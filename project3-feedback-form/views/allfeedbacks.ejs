@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback List</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <h1>Feedback List</h1>
+    <% for ( let fb of Feedback) { %>
+    <div class="card">
+      <p>Name: <%= fb.name %></p>
+      <p>Email: <%= fb.email %></p>
+      <p>Message: <%= fb.message %></p>
+    </div>
+    <% }%>
+  </body>
 </html>
