@@ -14,12 +14,18 @@
         type="text"
         name="task"
         placeholder="Enter your task"
+        required
       />
       <button id="btn">Add</button>
     </form>
     <ul>
-      <% for(let todo of todos){%>
-      <li><%= todo %><button class="dlt-btn">Delete</button></li>
+      <% for(let i=0;i<todos.length;i++){%>
+      <li><%= todos[i] %>
+        <form action="/delete" method="post">
+            <input type="hidden" name="index" value="<%= i %>">
+            <button type="submit">Delete</button>
+        </form>
+      </li>
       <% } %>
     </ul>
   </body>

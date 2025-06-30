@@ -20,9 +20,10 @@ app.post("/submit", (req, res) => {
   res.redirect("/");
 });
 
-let dlt = document.querySelector(".dlt-btn");
-dlt.addEventListener("click", () => {
-    
+app.post("/delete", (req, res) => {
+  let idx = req.body.index;
+  todos.splice(idx, 1);
+  res.redirect("/");
 });
 
 app.listen(3000, () => {
